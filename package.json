@@ -7,6 +7,9 @@
     "fmt": "prettier --write '{,!(coverage)}**/*.js'",
     "start": "node ."
   },
+  "bin": {
+    "meetup-api-crawler": "src"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
