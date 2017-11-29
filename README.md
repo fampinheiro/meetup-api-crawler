@@ -4,5 +4,5 @@ You can get your api key from https://secure.meetup.com/meetup_api/key/ and then
 
 `npx meetup-api-crawler --key xxxxxxxxxxxxxxxx require-lx`
 
-You can have some more information of what is happening setting the `DEBUG` environment variable.
+You can have some more information of what is happening setting the `DEBUG` environment variable.  
 The available options are `request` and `ratelimit`.
