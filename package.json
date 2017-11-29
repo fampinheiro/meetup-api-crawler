@@ -8,7 +8,7 @@
     "start": "node ."
   },
   "bin": {
-    "meetup-api-crawler": "src"
+    "meetup-api-crawler": "./src/index.js"
   },
   "author": "",
   "license": "ISC",
