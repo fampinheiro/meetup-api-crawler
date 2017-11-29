@@ -1,3 +1,5 @@
+const debug = require("debug")("ratelimit");
+const request = require("debug")("request");
 const got = require("got");
 const url = require("url");
 const config = require("../config");
@@ -13,6 +15,7 @@ module.exports = options => {
     }
   });
 
+  request(uri);
   return got(uri, {
     json: true
   }).then(result => {
@@ -24,7 +27,7 @@ module.exports = options => {
         return headers.concat(`${key}=${result.headers[key]}`);
       }, [])
       .join(", ");
-    console.error(headers);
+    debug(headers);
     return result;
   });
 };
