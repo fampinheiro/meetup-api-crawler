@@ -20,13 +20,7 @@ module.exports = members => {
 };
 
 function services(member) {
-  if (!member.services) {
-    return [];
-  }
-
   return ["twitter", "facebook"]
-    .reduce((result, key) => {
-      return result.concat(get(member, `service[${key}].identifier`, ""));
-    }, [])
+    .map(network => get(member, `other_services[${network}]identifier`, ""))
     .join(", ");
 }
